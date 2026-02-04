@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regresi Linier - Si Tampan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Analisis Regresi Linier</h1>
+            <p class="subtitle">Concurrent Users (X) vs Response Time (Y)</p>
+        </header>
+
+        <div class="input-group-header">
+            <span>No</span>
+            <span>User (X)</span>
+            <span>Time (Y)</span>
+            <span>Aksi</span>
+        </div>
+
+        <div id="dataRows" class="data-rows"></div>
+
+        <div class="actions">
+            <button class="btn-action btn-add" onclick="addRow()">+ Tambah</button>
+            <button class="btn-action btn-sample" onclick="loadSample()">Isi Contoh</button>
+            <button class="btn-action btn-reset" onclick="resetData()">Reset</button>
+            <button class="btn-action btn-calc" onclick="calculateRegression()">Hitung Regresi 🚀</button>
+        </div>
+
+        <div id="resultBox" class="result-box">
+            <div class="result-title">Persamaan Regresi (Model)</div>
+            <div class="equation" id="equationOutput">Y = ...</div>
+            
+            <div class="detail-grid">
+                <div class="detail-item">
+                    <span>Konstanta (a)</span>
+                    <strong id="valA">0</strong>
+                </div>
+                <div class="detail-item">
+                    <span>Koefisien (b)</span>
+                    <strong id="valB">0</strong>
+                </div>
+                <div class="detail-item">
+                    <span>Rata-rata X</span>
+                    <strong id="meanX">0</strong>
+                </div>
+                <div class="detail-item">
+                    <span>Rata-rata Y</span>
+                    <strong id="meanY">0</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
